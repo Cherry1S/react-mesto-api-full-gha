@@ -1,0 +1,9 @@
+.header__nav {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header__nav li {
+  list-style: none;
+}

@@ -1,0 +1,19 @@
+.profile__avatar-button {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border-radius: 120px;
+}
+
+.profile__avatar-button:hover > .profile__pencil {
+  visibility: visible;
+  opacity: 1;
+  transition: ease 0.5s;
+}
+
+.profile__avatar-button:hover > .profile__image {
+  opacity: 0.2;
+  transition: ease 0.5s;
+}
+

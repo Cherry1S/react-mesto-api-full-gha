@@ -1,0 +1,11 @@
+.elements__grid {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+  justify-items: center;
+  row-gap: 20px;
+  column-gap: 17px;
+}

@@ -1,0 +1,87 @@
+.authform {
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 358px;
+  text-align: center;
+}
+
+.authform__welcome {
+  margin: 60px 0 50px 0;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.authform__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.authform__form label {
+  font-size: 18px;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+.authform__button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.authform__input {
+  margin: 0;
+  padding: 0;
+  min-height: 27px;
+  border: none;
+  border-bottom: 2px solid #CCC;
+  background-color: #000;
+  color: #FFF;
+}
+
+.authform__input:focus {
+  outline: 0;
+}
+
+.authform__input:nth-of-type(2) {
+  margin: 30px 0 0 0;
+}
+
+.authform__link {
+  text-align: center;
+  margin-top: 216px;
+  border: none;
+  background-color: #FFF;
+  color: #000;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  max-width: 358px;
+  min-height: 50px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.authform__link:hover {
+  opacity: .6;
+  cursor: pointer;
+  transition: ease .5s;
+}
+
+.authform__signin {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.authform__signin p {
+  margin: 15px 12px 0 0;
+}
+
+.authform__login-link {
+  color: white;
+  text-decoration: none;
+}

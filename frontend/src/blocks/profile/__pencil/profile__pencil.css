@@ -1,0 +1,5 @@
+.profile__pencil {
+  position: absolute;
+  visibility: hidden;
+  opacity: .5;
+}
