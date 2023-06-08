@@ -5,12 +5,12 @@
   
 Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
 
-Адрес репозитория: https://github.com/...
+Адрес репозитория: https://github.com/Cherry1S/react-mesto-api-full-gha/
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 158.160.97.5
 
-Frontend https://...
+Frontend https://cherry.nomoredomains.rocks/
 
-Backend https://...
+Backend https://api.cherry.nomoredomains.rocks/sign-in

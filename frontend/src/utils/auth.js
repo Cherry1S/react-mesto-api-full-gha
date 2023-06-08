@@ -1,5 +1,5 @@
 // export const BASE_URL = 'https://auth.nomoreparties.co';
-export const BASE_URL = 'http://api.cherry.nomoredomains.rocks';
+export const BASE_URL = 'https://api.cherry.nomoredomains.rocks';
 
 function handleResponse(res) {
   if (res.ok) {

@@ -93,7 +93,7 @@ class Api {
 //   },
 // });
 const api = new Api({
-  baseUrl: 'http://api.cherry.nomoredomains.rocks',
+  baseUrl: 'https://api.cherry.nomoredomains.rocks',
   headers: {
     'Content-Type': 'application/json',
     'authorization': `Bearer ${localStorage.getItem('jwt')}`,

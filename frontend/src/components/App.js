@@ -43,7 +43,6 @@ function App() {
           if (res.email) {
             setCurrentEmail(res.email)
             setLoggedIn(true)
-            console.log(isLoggedIn)
             navigate('/')
           }
         })
