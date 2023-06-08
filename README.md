@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.97.5
+IP 158.160.97.5
 
 Frontend https://cherry.nomoredomains.rocks/
 
