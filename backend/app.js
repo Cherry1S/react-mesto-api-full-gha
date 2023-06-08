@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 const router = require('./routes');
@@ -11,6 +12,16 @@ const app = express();
 mongoose.connect(DB_URL).then(() => console.log('Connected to DB'));
 
 app.use(express.json());
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'https://cherry.nomoredomains.rocks',
+    'https://api.cherry.nomoredomains.rocks',
+    'http://cherry.nomoredomains.rocks',
+    'http://api.cherry.nomoredomains.rocks',
+  ],
+  credentials: true,
+}));
 
 app.use(requestLogger);
 app.use(router);

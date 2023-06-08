@@ -85,10 +85,16 @@ class Api {
   }
 }
 
+// const api = new Api({
+//   baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-60',
+//   headers: {
+//     authorization: 'fe2506e1-5260-4f6d-bc3e-c28fd341c579',
+//     'Content-Type': 'application/json',
+//   },
+// });
 const api = new Api({
-  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-60',
+  baseUrl: 'http://api.cherry.nomoredomains.rocks',
   headers: {
-    authorization: 'fe2506e1-5260-4f6d-bc3e-c28fd341c579',
     'Content-Type': 'application/json',
   },
 });
