@@ -21,6 +21,7 @@ app.use(cors({
     'http://cherry.nomoredomains.rocks',
     'http://api.cherry.nomoredomains.rocks',
   ],
+  credentials: true,
 }));
 
 app.use(requestLogger);
