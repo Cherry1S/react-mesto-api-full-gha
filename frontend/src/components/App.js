@@ -40,9 +40,10 @@ function App() {
       const jwt = localStorage.getItem('jwt')
       auth.getContent(jwt)
         .then((res) => {
-          if (res.data) {
-            setCurrentEmail(res.data.email)
+          if (res.email) {
+            setCurrentEmail(res.email)
             setLoggedIn(true)
+            console.log(isLoggedIn)
             navigate('/')
           }
         })
@@ -67,7 +68,7 @@ function App() {
   }, []);
 
   function handleCardLike(card) {
-    const isLiked = card.likes.some(like => like._id === currentUser._id);
+    const isLiked = card.likes.some(like => like === currentUser._id);
 
     api.changeLikeCardStatus(card._id, !isLiked)
       .then((newCard) => {

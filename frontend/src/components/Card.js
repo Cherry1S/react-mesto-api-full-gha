@@ -4,8 +4,8 @@ import { AppContext } from '../contexts/AppContext.js';
 
 function Card({ card, onCardClick, onCardLike, onCardDelete }) {
   const context = useContext(AppContext);
-  const isOwn = card.owner._id === context.currentUser._id;
-  const isLiked = card.likes.some(like => like._id === context.currentUser._id);
+  const isOwn = card.owner === context.currentUser._id;
+  const isLiked = card.likes.some(like => like === context.currentUser._id);
   const cardLikeButtonClassName = (
     `elements__card-like button-transparent ${isLiked && 'elements__card-like_active'}`
   );
