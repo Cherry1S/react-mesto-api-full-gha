@@ -6,7 +6,7 @@ const BadRequestError = require('../errors/BadRequestError');
 const NotFoundError = require('../errors/NotFoundError');
 
 const getCards = (req, res, next) => {
-  Card.find({})
+  Card.find({}).sort({ createdAt: -1 })
     .then((cards) => {
       res.send(cards);
     })
@@ -35,7 +35,8 @@ const deleteCard = (req, res, next) => {
         next(new ForbiddenError('Доступ ограничен'));
         return;
       }
-      Card.findByIdAndRemove(req.params.cardId)
+      // eslint-disable-next-line consistent-return
+      return Card.findByIdAndRemove(req.params.cardId)
         .then((removedCard) => {
           res.send(removedCard);
         });

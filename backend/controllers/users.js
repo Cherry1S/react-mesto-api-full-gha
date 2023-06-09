@@ -5,7 +5,6 @@ const User = require('../models/user');
 const BadRequestError = require('../errors/BadRequestError');
 const ConflictError = require('../errors/ConflictError');
 const NotFoundError = require('../errors/NotFoundError');
-const UnauthorizedError = require('../errors/UnauthorizedError');
 
 const { NODE_ENV, JWT_SECRET = 'super-strong-secret' } = process.env;
 
@@ -18,7 +17,7 @@ const login = (req, res, next) => {
         token: jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret', { expiresIn: '7d' }),
       });
     })
-    .catch(() => next(new UnauthorizedError('Неправильные почта или пароль')));
+    .catch(next);
 };
 
 const getUser = (req, res, next) => {
@@ -26,7 +25,7 @@ const getUser = (req, res, next) => {
     .then((user) => {
       res.send(user);
     })
-    .catch(() => next(new BadRequestError('Передан некорректный id')));
+    .catch(next);
 };
 
 const getUsers = (req, res, next) => {
