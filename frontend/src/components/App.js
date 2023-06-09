@@ -58,13 +58,13 @@ function App() {
       api.getUser()
     ])
       .then((pageData) => {
-        setCards(...cards, pageData[0]);
+        setCards(pageData[0]);
         setCurrentUser(pageData[1]);
       })
       .catch((err) => {
         console.log(err)
       });
-  }, []);
+  }, [isLoggedIn]);
 
   function handleCardLike(card) {
     const isLiked = card.likes.some(like => like === currentUser._id);
